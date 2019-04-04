@@ -14,4 +14,7 @@ FROM
     ORDER BY ID_Vente) AS T2
     WHERE T2.Nom_province IS NOT NULL 
 GROUP BY T2.Nom_province
-ORDER BY T2.Nom_province) AS T3projet
+ORDER BY T2.Nom_province) AS T3projet;
+
+SELECT *
+FROM requete_12v2;
