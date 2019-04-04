@@ -1,7 +1,6 @@
-SELECT T1.`Year` AS Annee, T1.C1 AS `Moyenne des quantitées vendu chaque année hors Ægypte`,T2.C1 AS `Moyenne des quantitées vendu chaque année en Ægypte`, ROUND(((T2.C1-T1.C1)/T1.C1)*100,2) AS `Difference en %`
-
+SELECT T1.`Year` AS Annee, T1.C1 AS `Moyenne des quantités vendues chaque année hors Ægypte`,T2.C1 AS `Moyenne des quantités vendues chaque année en Ægypte`, ROUND(((T2.C1-T1.C1)/T1.C1)*100,2) AS `Difference en %`
 FROM
-
+/* On calcule la moyenne vendu (en quantité) par annee hors Ægypte*/
 	(
 	SELECT T0.ID,SUBSTRING(vente.`Date`,1,3) AS `Year`,AVG(Quantite) AS C1 
 	FROM vente
@@ -10,9 +9,8 @@ FROM
 	WHERE vente.ID_Lieu IS NOT NULL AND vente.ID_Lieu !=2
 	GROUP BY SUBSTRING(vente.`Date`,1,3)
 	) AS T1
-
 LEFT JOIN
-
+/* On calcule la moyenne vendu (en quantité) par annee en Ægypte*/
 	(SELECT T0.ID, SUBSTRING(vente.`Date`,1,3) AS `Year` ,AVG(Quantite) AS C1
 	FROM vente
 	LEFT JOIN lieu ON vente.ID_Lieu=lieu.ID
@@ -20,5 +18,4 @@ LEFT JOIN
 	WHERE vente.ID_Lieu IS NOT NULL AND vente.ID_Lieu =2
 	GROUP BY SUBSTRING(vente.`Date`,1,3)
 	) AS T2
-	
 ON T1.`Year`=T2.`Year` 
