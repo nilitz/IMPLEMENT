@@ -15,3 +15,11 @@ WHERE vente.ID_Divinite IS NOT NULL AND fabrique.ID_Artisan IS NOT NULL;
 
 CREATE TEMPORARY TABLE t3
 SELECT ID_Artisan, ID_divinite, MAX(t2.ObelosDeBronze) AS Prixmaxi FROM t2 GROUP BY t2.ID_Artisan;
+
+_____________________________________________________________________________________________________
+
+SELECT rapporte.ID, ROUND(SUM((rapporte.Quantite * oberon.CoefficientDeConversion)/vente.Quantite))
+FROM rapporte
+LEFT JOIN oberon ON rapporte.ID_Oberon = oberon.ID
+LEFT JOIN vente ON rapporte.ID = vente.ID
+GROUP BY rapporte.ID
