@@ -7,3 +7,4 @@ BEGIN
 		WHERE fabrique.ID_Artisan = artisan_id
 		GROUP BY fabrique.ID_Artisan, SUBSTRING_INDEX(vente.DATE, ",", 1);
 END $$
+/* CALL requete_neuf('choisir_un_nombre') */
