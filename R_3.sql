@@ -1,4 +1,4 @@
-SELECT lieu.Nom AS Nom_Lieux,divinite.nom AS Nom_Dieux
+SELECT lieu.Nom AS `Nom de la Province`,divinite.nom AS `Nom de la Divinite la plus representée`
 FROM
     (SELECT T0.ID AS ID_Lieu,vente.ID_Divinite AS ID_Divinite, COUNT(vente.ID_Divinite) AS Count
     FROM vente
