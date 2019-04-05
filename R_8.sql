@@ -6,8 +6,6 @@ CREATE TEMPORARY TABLE don_guerre
     guerre_equipement_id INT
 );
 
-
-
 INSERT INTO don_guerre
 SELECT T0.ID, T0.Annee, T0.ID_Lieu, vente.ID_TypeEquipement
 FROM (SELECT guerre.ID, guerre.Annee, participe.ID_DemiDieu, guerre.ID_Lieu
@@ -27,9 +25,5 @@ FROM
     WHERE ((SUBSTRING_INDEX(vente.DATE, ",", 1) - 1) = don_guerre.guerre_an) OR ((SUBSTRING_INDEX(vente.DATE, ",", 1)) = don_guerre.guerre_an)
 ) AS T1
 GROUP BY T1.`date`;
-
-
-SELECT *
-FROM don_guerre;
 
 DROP TEMPORARY TABLE don_guerre;
