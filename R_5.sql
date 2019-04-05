@@ -1,4 +1,4 @@
-SELECT T1.Nom, ROUND(T1.Moyenne) AS `Sommes des ventes de la divinités fêtée`, T2.Moyenne AS `Moyenne de la somme des ventes de divinités non fêtées`, ROUND(T1.Moyenne / T2.Moyenne * 100, 2) AS `Rapport en %`
+SELECT T1.Nom, ROUND(T1.Moyenne) AS `ventes divinité fêtée`, Round(T2.Moyenne) AS `ventes moyennes divinités non fêtées`, ROUND(T1.Moyenne / T2.Moyenne * 100, 2) AS `Rapport en %`
 FROM
 (
     SELECT AVG(T0.somme) AS Moyenne, T0.nom
