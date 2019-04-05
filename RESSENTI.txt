@@ -22,7 +22,14 @@ RESSENTIS :
     Le dernier problème fut la précision des demandes des Dieux concernant les requêtes, en effet celles-ci étaient imprécises
     et m'on conduit à réecrire plusieurs requêtes à partir de rien.
     
-  NAOMIE :
+  NAOMIE : Pendant ce projet j'ai pu découvrir le langage SQL, qui est un langage très puissant. 
+    J'ai beaucoup apprécier ce bloc même si le système projet/prosit n'est pas très convenable, 
+    j'entend par là que nous n'avons pas forcément le temps d'assimiler chaque notions vu pendant 
+    les prosit pour ensuite les appliquer dans notre projet. Mais malgré ces difficultés nous avons 
+    quand même su nous organiser et s'entraider sur ce projet. Nous avons cependant 
+    quand même rencontré des problèmes par rapport aux requêtes qui étaient pas assez précises 
+    mais également avec l'Oracle qui quand nous lui demandions des indications 
+    nous rajoutait encore plus de contraintes.
   
   ALEXANDRE : Ce projet m’a permis d’acquérir des connaissances en SQL, et d’en découvrir l’intérêt.
     Toute cette expérience n’était pas des plus plaisantes principalement a cause de la forme Projet/prosit, 
